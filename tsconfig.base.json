@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "target": "ES2019",
+    "module": "CommonJS",
+    "strict": true
+  },
+  "include": ["src"],
+}

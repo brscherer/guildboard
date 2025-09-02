@@ -1,0 +1,21 @@
+{
+  "name": "guildboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "start:api": "pnpm --filter @guildboard/api dev",
+    "start:web": "pnpm --filter @guildboard/web dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.4",
+  "dependencies": {
+    "turbo": "^2.5.6"
+  }
+}

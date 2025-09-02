@@ -1,0 +1,14 @@
+{
+  "files": [],
+  "references": [
+    { "path": "libs/contracts" },
+    { "path": "apps/api" },
+    { "path": "apps/web" }
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@guildboard/contracts": ["libs/contracts/src"]
+    }
+  }
+}
