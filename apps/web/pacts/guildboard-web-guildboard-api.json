@@ -1,0 +1,44 @@
+{
+  "consumer": {
+    "name": "guildboard-web"
+  },
+  "interactions": [
+    {
+      "description": "a request for quests",
+      "providerState": "there are quests",
+      "request": {
+        "method": "GET",
+        "path": "/api/quests"
+      },
+      "response": {
+        "body": [
+          {
+            "difficulty": "easy",
+            "id": 1,
+            "reward": "50 gold",
+            "title": "Slay the Crawler"
+          }
+        ],
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "15.0.1"
+    },
+    "pactRust": {
+      "ffi": "0.4.22",
+      "models": "1.2.3"
+    },
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  },
+  "provider": {
+    "name": "guildboard-api"
+  }
+}
