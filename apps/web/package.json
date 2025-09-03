@@ -6,9 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "vitest",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "test": "vitest"
   },
   "dependencies": {
     "react": "^18.0.0",
@@ -18,7 +16,6 @@
     "@pact-foundation/pact": "^15.0.1",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "cypress": "^12.0.0",
     "typescript": "^5.0.0",
     "vite": "^5.0.0",
     "vitest": "^0.34.0"

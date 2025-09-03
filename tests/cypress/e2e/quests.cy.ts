@@ -1,9 +1,23 @@
-describe('Quests E2E', () => {
-  it('shows quests list', () => {
-    cy.visit('http://localhost:5173'); // frontend dev URL
-    cy.contains('Guildboard — Quests');
-    cy.get('ul').should('exist');
-    // visual snapshot (basic)
-    cy.screenshot('home-default');
+/// <reference types="cypress" />
+
+describe('Quests Page', () => {
+  beforeEach(() => {
+    cy.visit('/quests'); 
+  });
+
+  it('should display a list of quests', () => {
+    cy.intercept('GET', '/api/quests', {
+      statusCode: 200,
+      body: [
+        { id: 1, title: 'Slay the Crawler', difficulty: 'easy', reward: '50 gold' },
+        { id: 2, title: 'Rescue the Princess', difficulty: 'medium', reward: '200 gold' },
+      ],
+    }).as('getQuests');
+
+    cy.reload();
+    cy.wait('@getQuests');
+
+    cy.contains('Slay the Crawler');
+    cy.contains('Rescue the Princess');
   });
 });
