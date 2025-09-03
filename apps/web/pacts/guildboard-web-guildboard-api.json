@@ -17,6 +17,12 @@
             "id": 1,
             "reward": "50 gold",
             "title": "Slay the Crawler"
+          },
+          {
+            "difficulty": "medium",
+            "id": 2,
+            "reward": "200 gold",
+            "title": "Rescue the Villagers"
           }
         ],
         "headers": {

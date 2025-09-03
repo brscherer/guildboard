@@ -17,7 +17,7 @@ describe("Quests API (consumer)", () => {
   afterAll(async () => {
     await provider.finalize();
   });
-  afterEach( async () => {
+  afterEach(async () => {
     await provider.verify();
   });
 
@@ -32,11 +32,14 @@ describe("Quests API (consumer)", () => {
       willRespondWith: {
         status: 200,
         headers: { "Content-Type": "application/json" },
-        body: [{ id: 1, title: "Slay the Crawler", difficulty: "easy", reward: "50 gold" }],
+        body: [
+          { id: 1, title: "Slay the Crawler", difficulty: "easy", reward: "50 gold" },
+          { id: 2, title: "Rescue the Villagers", difficulty: "medium", reward: "200 gold" },
+        ],
       },
     });
 
-    const quests = await fetch(`${provider.mockService.baseUrl}/api/quests`).then(res => res.json());
+    const quests = await fetch(`${provider.mockService.baseUrl}/api/quests`).then((res) => res.json());
     expect(quests[0].title).toBe("Slay the Crawler");
   });
 });

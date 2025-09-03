@@ -6,9 +6,15 @@
     { "path": "apps/web" }
   ],
   "compilerOptions": {
+    "declaration": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "target": "ES2019",
+    "module": "CommonJS",
+    "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@guildboard/contracts": ["libs/contracts/src"]
+      "@guildboard/contracts": ["libs/contracts/src/index.ts"]
     }
-  }
+  },
 }

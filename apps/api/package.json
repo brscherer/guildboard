@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "build": "tsc -p tsconfig.json",
+    "verify-pact": "ts-node-dev scripts/verify-pact.ts",
     "test": "vitest"
   },
   "dependencies": {
