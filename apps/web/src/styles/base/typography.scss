@@ -1,0 +1,27 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #0051a3;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}

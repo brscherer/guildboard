@@ -1,0 +1,11 @@
+@mixin paper-style {
+  background: $color-paper;
+  border: 2px solid $color-paper-border;
+  box-shadow: $shadow-paper;
+}
+
+@mixin center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
