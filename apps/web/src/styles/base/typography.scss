@@ -2,13 +2,16 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 0.5em;
+  font-family: "MedievalSharp", cursive;
 }
 
 p {
+  font-family: "MedievalSharp", cursive;
   margin-bottom: 1em;
 }
 
 a {
+  font-family: "MedievalSharp", cursive;
   color: #0070f3;
   text-decoration: none;
   transition: color 0.2s;
@@ -19,9 +22,15 @@ a {
 }
 
 strong {
+  font-family: "MedievalSharp", cursive;
   font-weight: bold;
 }
 
 em {
+  font-family: "MedievalSharp", cursive;
   font-style: italic;
+}
+
+span, div, li {
+  font-family: "MedievalSharp", cursive;
 }
