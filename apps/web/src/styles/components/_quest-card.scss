@@ -1,5 +1,7 @@
+@use "../abstracts/mixins";
+
 .quest-card {
-  @include paper-style;
+  @include mixins.paper-style;
   width: 220px;
   min-height: 120px;
   cursor: pointer;

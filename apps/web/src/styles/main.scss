@@ -1,7 +1,7 @@
-@import "abstracts/variables";
-@import "abstracts/mixins";
-@import "base/reset";
-@import "base/base";
-@import "base/typography";
-@import './components/_board';
-@import './components/_quest-card';
+@use "abstracts/variables";
+@use "abstracts/mixins";
+@use "base/reset";
+@use "base/base";
+@use "base/typography";
+@use 'components/_board';
+@use 'components/_quest-card';

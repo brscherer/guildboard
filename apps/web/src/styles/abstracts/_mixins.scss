@@ -1,7 +1,9 @@
+@use "variables";
+
 @mixin paper-style {
-  background: $color-paper;
-  border: 2px solid $color-paper-border;
-  box-shadow: $shadow-paper;
+  background: variables.$color-paper;
+  border: 2px solid variables.$color-paper-border;
+  box-shadow: variables.$shadow-paper;
 }
 
 @mixin center-flex {

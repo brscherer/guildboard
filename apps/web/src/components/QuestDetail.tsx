@@ -1,0 +1,48 @@
+import React, { useEffect } from 'react';
+import type { QuestDTO } from '@guildboard/contracts';
+import '../styles/components/_quest-card.scss';
+
+type Props = {
+  quest: QuestDTO;
+  onClose: () => void;
+  'data-testid'?: string;
+};
+
+export default function QuestDetail({ quest, onClose, 'data-testid': dt }: Props) {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [onClose]);
+
+  return (
+    <div className="quest-detail-backdrop" onClick={onClose} data-testid={dt ?? 'quest-detail'}>
+      <section
+        className="quest-card quest-card--detail"
+        role="dialog"
+        aria-modal="true"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button className="quest-card__close" onClick={onClose} aria-label="Close quest">
+          ×
+        </button>
+        <div className="quest-card__content">
+          <h2 className="quest-card__title">{quest.title}</h2>
+          <div className="quest-card__meta">
+            <span>Difficulty: {quest.difficulty}</span>
+            <span>Reward: {quest.reward}</span>
+          </div>
+          <div className="quest-card__body">
+            <p>
+              This is the full description of the quest. It contains the lore, objectives, and
+              additional notes. The hero must travel east, cross the Whispering Marshes, and
+              negotiate with the Hollow King.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
