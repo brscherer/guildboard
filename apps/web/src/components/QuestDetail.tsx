@@ -31,8 +31,8 @@ export default function QuestDetail({ quest, onClose, 'data-testid': dt }: Props
         <div className="quest-card__content">
           <h2 className="quest-card__title">{quest.title}</h2>
           <div className="quest-card__meta">
-            <span>Difficulty: {quest.difficulty}</span>
-            <span>Reward: {quest.reward}</span>
+            <span>Difficulty: <span className={`quest-card__difficulty ${quest.difficulty}`}>{quest.difficulty}</span></span>
+            <span>Reward: <div className='quest-card__gold' /> {quest.reward}</span>
           </div>
           <div className="quest-card__body">
             <p>
