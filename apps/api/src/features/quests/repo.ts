@@ -12,5 +12,10 @@ export const QuestRepo = {
   },
   findById: async (id: number): Promise<QuestDTO | undefined> => {
     return quests.find((q) => q.id === id);
+  },
+  save: async (quest: Omit<QuestDTO, 'id'>): Promise<QuestDTO> => {
+    const newQuest = { id: quests.length + 1, ...quest };
+    quests.push(newQuest);
+    return newQuest;
   }
 };

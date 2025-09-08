@@ -1,8 +1,9 @@
 import { FastifyPluginAsync } from 'fastify';
-import { listQuestsHandler } from './controller';
+import { listQuestsHandler, saveQuestHandler } from './controller';
 
 export const questsRoutes: FastifyPluginAsync = async (server) => {
   server.get('/', listQuestsHandler);
+  server.post('/', saveQuestHandler);
   server.get('/:id', async (req, reply) => {
     const id = Number((req.params as any).id);
     const items = await server.inject({ method: 'GET', url: '/' }); // not used; we keep simple
