@@ -36,9 +36,7 @@ export default function QuestDetail({ quest, onClose, 'data-testid': dt }: Props
           </div>
           <div className="quest-card__body">
             <p>
-              This is the full description of the quest. It contains the lore, objectives, and
-              additional notes. The hero must travel east, cross the Whispering Marshes, and
-              negotiate with the Hollow King.
+              {quest.description ?? 'No description provided.'}
             </p>
           </div>
         </div>

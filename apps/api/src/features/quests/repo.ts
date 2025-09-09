@@ -2,8 +2,8 @@ import type { QuestDTO } from '@guildboard/contracts';
 
 // Simple in-memory store for POC
 const quests: QuestDTO[] = [
-  { id: 1, title: 'Slay the Crawler', difficulty: 'easy', reward: '50 gold' },
-  { id: 2, title: 'Rescue the Villagers', difficulty: 'medium', reward: '200 gold' },
+  { id: 1, title: 'Slay the Crawler', difficulty: 'easy', reward: '50 gold', description: 'Defeat the giant crawler terrorizing the village.' },
+  { id: 2, title: 'Rescue the Villagers', difficulty: 'medium', reward: '200 gold', description: 'Rescue the villagers captured by goblins.' },
 ];
 
 export const QuestRepo = {

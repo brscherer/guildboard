@@ -3,4 +3,5 @@ export interface QuestDTO {
   title: string;
   difficulty: 'easy' | 'medium' | 'hard';
   reward: string;
+  description: string;
 }

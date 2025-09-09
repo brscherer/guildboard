@@ -30,7 +30,7 @@ export default function QuestCard({ quest, rotation = 0, onSelect, 'data-testid'
         </h3>
         {/* placeholder blurred preview */}
         <p className="quest-card__preview" data-testid="quest-preview">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+          {quest.description ? quest.description.slice(0, 60) + (quest.description.length > 60 ? '...' : '') : 'No description provided.'}
         </p>
       </div>
     </button>

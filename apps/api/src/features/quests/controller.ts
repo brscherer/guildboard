@@ -9,7 +9,7 @@ export async function listQuestsHandler(_req: FastifyRequest, reply: FastifyRepl
 
 export async function saveQuestHandler(req: FastifyRequest, reply: FastifyReply) {
   const questData = req.body as Omit<QuestDTO, "id">;
-  if (!questData.title || !questData.difficulty || !questData.reward) {
+  if (!questData.title || !questData.difficulty || !questData.reward || !questData.description) {
     return reply.status(400).send({ error: 'Missing fields' });
   }
   const newQuest = await QuestService.save(questData);
